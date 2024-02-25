@@ -58,7 +58,11 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="5mT-WD-c1t">
-                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="mRh-ER-4iu"/>
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="mRh-ER-4iu">
+                            <connections>
+                                <action selector="didTapAdd" destination="BYZ-38-t0r" id="cbS-NJ-hWg"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
