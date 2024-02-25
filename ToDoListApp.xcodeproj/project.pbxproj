@@ -16,6 +16,8 @@
 		F77ADF5E2B89D02D00565D62 /* ToDoListAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77ADF5D2B89D02D00565D62 /* ToDoListAppTests.swift */; };
 		F77ADF682B89D02E00565D62 /* ToDoListAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77ADF672B89D02E00565D62 /* ToDoListAppUITests.swift */; };
 		F77ADF6A2B89D02E00565D62 /* ToDoListAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77ADF692B89D02E00565D62 /* ToDoListAppUITestsLaunchTests.swift */; };
+		F7951D382B8B330E004D1B8E /* NewToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7951D372B8B330E004D1B8E /* NewToDoViewController.swift */; };
+		F7951D3A2B8B34D2004D1B8E /* ContentToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7951D392B8B34D2004D1B8E /* ContentToDoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		F77ADF632B89D02D00565D62 /* ToDoListAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoListAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F77ADF672B89D02E00565D62 /* ToDoListAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListAppUITests.swift; sourceTree = "<group>"; };
 		F77ADF692B89D02E00565D62 /* ToDoListAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F7951D372B8B330E004D1B8E /* NewToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewToDoViewController.swift; sourceTree = "<group>"; };
+		F7951D392B8B34D2004D1B8E /* ContentToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentToDoViewController.swift; sourceTree = "<group>"; };
 		F7DFBD152B8A4F4700619B24 /* Practice.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Practice.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
@@ -104,6 +108,8 @@
 				F77ADF462B89D02C00565D62 /* AppDelegate.swift */,
 				F77ADF482B89D02C00565D62 /* SceneDelegate.swift */,
 				F77ADF4A2B89D02C00565D62 /* ViewController.swift */,
+				F7951D372B8B330E004D1B8E /* NewToDoViewController.swift */,
+				F7951D392B8B34D2004D1B8E /* ContentToDoViewController.swift */,
 				F77ADF4C2B89D02C00565D62 /* Main.storyboard */,
 				F77ADF4F2B89D02D00565D62 /* Assets.xcassets */,
 				F77ADF512B89D02D00565D62 /* LaunchScreen.storyboard */,
@@ -269,7 +275,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F77ADF4B2B89D02C00565D62 /* ViewController.swift in Sources */,
+				F7951D382B8B330E004D1B8E /* NewToDoViewController.swift in Sources */,
 				F77ADF472B89D02C00565D62 /* AppDelegate.swift in Sources */,
+				F7951D3A2B8B34D2004D1B8E /* ContentToDoViewController.swift in Sources */,
 				F77ADF492B89D02C00565D62 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
