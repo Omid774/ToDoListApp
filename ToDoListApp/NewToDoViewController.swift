@@ -8,6 +8,12 @@
 import UIKit
 
 class NewToDoViewController: UIViewController {
+    
+    // MARK: - properties
+    
+    @IBOutlet var field: UITextField!
+    
+    // MARK: - life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -11,16 +11,23 @@ class ViewController: UIViewController {
     
     // MARK: - properties
     
-    let cellIdentifier: String = "myCell"
-    
     @IBOutlet var tableView: UITableView!
 
+    let cellIdentifier: String = "myCell"
+    
+    var todos: [String] = []
+    
+    // MARK: - life cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        self.title = "My To Do List"
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        
         
         view.backgroundColor = .white
     }

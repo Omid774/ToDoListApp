@@ -8,6 +8,12 @@
 import UIKit
 
 class ContentToDoViewController: UIViewController {
+    
+    // MARK: - properties
+    
+    @IBOutlet var label: UILabel!
+    
+    // MARK: - life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
