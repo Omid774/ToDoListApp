@@ -2,6 +2,8 @@ import UIKit
 
 var greeting = "Hello, playground"
 
+// UserDefaults.standard.set ========= UserDefaults().set
+
 UserDefaults.standard.set(true, forKey: "number")
 print(UserDefaults.standard.bool(forKey: "number"))
 

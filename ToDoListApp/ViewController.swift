@@ -29,9 +29,9 @@ class ViewController: UIViewController {
         
         // Setup
         
-        if !UserDefaults().bool(forKey: "setup") {
-            UserDefaults().set(true, forKey: "setup")
-            UserDefaults().set(0, forKey: "count")
+        if !UserDefaults.standard.bool(forKey: "setup") {
+            UserDefaults.standard.set(true, forKey: "setup")
+            UserDefaults.standard.set(0, forKey: "count")
         }
         
         // Get all current saved tasks
@@ -44,11 +44,11 @@ class ViewController: UIViewController {
         
         todos.removeAll()
         
-        guard let count = UserDefaults().value(forKey: "count") as? Int else { return }
+        guard let count = UserDefaults.standard.value(forKey: "count") as? Int else { return }
         
         for x in 0 ..< count {
             
-            if let task = UserDefaults().value(forKey: "task_\(x + 1)") as? String {
+            if let task = UserDefaults.standard.value(forKey: "task_\(x + 1)") as? String {
                 todos.append(task)
             }
             
