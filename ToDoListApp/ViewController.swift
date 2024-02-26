@@ -35,12 +35,12 @@ class ViewController: UIViewController {
         }
         
         // Get all current saved tasks
-        updateTasks()
+        updateToDos()
         
         view.backgroundColor = .white
     }
     
-    func updateTasks() {
+    func updateToDos() {
         
         todos.removeAll()
         
@@ -61,10 +61,10 @@ class ViewController: UIViewController {
     @IBAction func didTapAdd() {
         
         let vc = storyboard?.instantiateViewController(identifier: "new") as! NewToDoViewController
-        vc.title = "New Task"
+        vc.title = "NewToDoViewController"
         vc.update = {
             DispatchQueue.main.async {
-                self.updateTasks()
+                self.updateToDos()
             }
         }
         navigationController?.pushViewController(vc, animated: true)

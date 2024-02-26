@@ -53,5 +53,12 @@ func fetchOmid() {
 
 fetchOmid()
 let retrieve = UserDefaults.standard.data(forKey: "omidImageData")
-print(retrieve)
+//print(retrieve)
 
+let myBool = true
+
+if myBool {
+    print("myBook is \(myBool)")
+} else { print("myBool is false") }
+
+print("ok")
