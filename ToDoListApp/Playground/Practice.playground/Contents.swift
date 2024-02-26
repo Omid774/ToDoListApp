@@ -55,10 +55,6 @@ fetchOmid()
 let retrieve = UserDefaults.standard.data(forKey: "omidImageData")
 //print(retrieve)
 
-let myBool = true
-
-if myBool {
-    print("myBook is \(myBool)")
-} else { print("myBool is false") }
-
-print("ok")
+var firstRun = UserDefaults.standard.bool(forKey: "omid")
+UserDefaults.standard.set(true, forKey: "omid")
+firstRun
