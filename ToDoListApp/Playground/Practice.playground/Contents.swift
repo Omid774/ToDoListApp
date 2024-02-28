@@ -34,18 +34,13 @@ class myViewController2: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let button2 = UIButton(type: .system)
+        let myView = UIView()
         
-        button2.setTitle("button2", for: .normal)
-        button2.frame = CGRect(x: 120, y: 120, width: 200, height: 200)
-        button2.addTarget(self, action: #selector(button2Tapped), for: .touchUpInside)
+        myView.frame = CGRect(x: view.frame.width / 2, y: 120, width: view.frame.width / 5, height: 200)
+        myView.backgroundColor = .red
         
-        view.addSubview(button2)
+        view.addSubview(myView)
         
-    }
-    
-    @objc func button2Tapped() {
-        print("Button 2 is Tapped!")
     }
     
 }
