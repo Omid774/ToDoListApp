@@ -35,11 +35,16 @@ class myViewController2: UIViewController {
         super.viewDidLoad()
         
         let myView = UIView()
+        let myview2 = UIView()
         
         myView.frame = CGRect(x: view.frame.width / 2, y: 120, width: view.frame.width / 5, height: 200)
         myView.backgroundColor = .red
         
+        myview2.frame = CGRect(x: view.frame.width / 2, y: 120, width: view.frame.width / 5, height: 200)
+        myview2.backgroundColor = .yellow
+        
         view.addSubview(myView)
+        myView.addSubview(myview2)
         
     }
     
