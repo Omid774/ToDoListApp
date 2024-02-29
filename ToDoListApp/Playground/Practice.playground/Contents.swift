@@ -1,27 +1,16 @@
 import UIKit
-import PlaygroundSupport
 
-class ViewController: UIViewController {
+struct Person: Hashable {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        let button = UIButton(type: .system)
-        button.frame = CGRect(x: 100, y: 200, width: 50, height: 50)
-        button.setTitle("ok", for: .normal)
-        button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
-        
-        
-        view.addSubview(button)
-        
-    }
-    
-    @objc func buttonTapped() {
-        print("Button tapped!")
-    }
+    let name: String
+    let lastName: String
     
 }
 
-let myViewController = ViewController()
+let person1 = Person(name: "omid", lastName: "heydarzadeh")
+let person2 = Person(name: "hasan", lastName: "shamaeizadeh")
 
-PlaygroundPage.current.liveView = myViewController
+var personDictionary: [Person: String] = [:]
+
+personDictionary[person1] = "one"
+personDictionary[person2] = "two"
