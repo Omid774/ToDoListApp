@@ -27,3 +27,14 @@ func fetch() {
 }
 
 fetch()
+
+class Person: Hashable {
+    
+    var name: String
+    var lastName: String
+    
+    init(_ name: String, _ lastName: String) {
+        self.name = name; self.lastName = lastName
+    }
+    
+}
