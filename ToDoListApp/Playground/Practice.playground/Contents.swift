@@ -1,16 +1,29 @@
 import UIKit
 
-struct Person: Hashable {
+let url = "https://reactnative.dev/movies.json"
+
+func fetch() {
     
-    let name: String
-    let lastName: String
+    guard let url = URL(string: url) else { return }
+    
+    let dataTask = URLSession.shared.dataTask(with: url) { data, _, error in
+        
+        if let error = error { print("there is an fetching error: \(error.localizedDescription)") }
+        
+        guard let data = data else { return }
+        
+        print(data)
+        print("data: \(type(of: data))")
+        
+        let count = data.count
+        
+        print(count)
+        print("count: \(type(of: count))")
+        
+    }
+    
+    dataTask.resume()
     
 }
 
-let person1 = Person(name: "omid", lastName: "heydarzadeh")
-let person2 = Person(name: "hasan", lastName: "shamaeizadeh")
-
-var personDictionary: [Person: String] = [:]
-
-personDictionary[person1] = "one"
-personDictionary[person2] = "two"
+fetch()
