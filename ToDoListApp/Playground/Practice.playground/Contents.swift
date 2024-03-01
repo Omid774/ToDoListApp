@@ -5,25 +5,41 @@ import UIKit
 // https://api.github.com/repos/:owner/:repo
 // https://elcomercio.pe/resizer/wNOHq2Ey0866Ur5dfLfA3C5TcP4=/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/D5DQJROBSFH2DAL2TVL26I6MLE.jpg
 
-protocol T {
+/*
+ 
+ @objc func saveTask() {
+     
+     guard let text = field.text, !text.isEmpty else { return }
+     
+     guard let count = UserDefaults.standard.value(forKey: "count") as? Int else { return }
+     
+     let newCount = count + 1
+     
+     UserDefaults.standard.set(newCount, forKey: "count")
+     
+     UserDefaults.standard.set(text, forKey: "task_\(newCount)")
+     
+     update?() // if this method exist call else nothing or nil
+     
+     navigationController?.popViewController(animated: true)
+     
+ }
+ 
+ */
+
+
+// textfield, text
+
+struct TextField {
+    
+    let text: String = ""
     
 }
 
-extension URL: T {
+func saveTask() {
     
-}
-
-func type(_ input: T) {
+    let textField = TextField()
     
-    print(type(of: input))
-    
-}
-
-let json = URL(string: "https://reactnative.dev/movies.json")!
-
-type(json)
-type("ok")
-
-extension String: T {
+    guard let text = textField.text, !textField.text.isEmpty else { return }
     
 }
