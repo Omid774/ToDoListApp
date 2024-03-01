@@ -22,3 +22,8 @@ func type(_ input: T) {
 let json = URL(string: "https://reactnative.dev/movies.json")!
 
 type(json)
+type("ok")
+
+extension String: T {
+    
+}
