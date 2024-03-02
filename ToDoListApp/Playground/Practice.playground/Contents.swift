@@ -33,3 +33,8 @@ func findSQRT(number: Int) -> Int {
 
 print(16, " sqrt => ", findSQRT(number: 16))
 print(25, " sqrt => ", findSQRT(number: 25))
+
+let twentyFive = findSQRT(number: 25)
+UserDefaults.standard.set(twentyFive, forKey: "omid")
+UserDefaults.standard.value(forKey: "omid")
+
