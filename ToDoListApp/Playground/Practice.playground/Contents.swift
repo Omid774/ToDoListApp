@@ -30,16 +30,31 @@ import UIKit
 
 // textfield, text
 
-struct TextField {
-    
-    let text: String = ""
-    
-}
+var textField = UITextField()
+let navigationController = UINavigationController()
+
+
+func update() {}
+
+UserDefaults.standard.set(0, forKey: "count")
+
 
 func saveTask() {
     
-    let textField = TextField()
+    guard let text = textField.text, !text.isEmpty else { return }
     
-    guard let text = textField.text, !textField.text.isEmpty else { return }
+    guard let count = UserDefaults.standard.value(forKey: "count") as? Int else { return }
+    
+    let newCount = count + 1
+    
+    UserDefaults.standard.set(newCount, forKey: "count")
+    
+    UserDefaults.standard.set(text, forKey: "task_\(newCount)")
+    
+    update()
+    
+    navigationController.popViewController(animated: true)
     
 }
+
+saveTask()
