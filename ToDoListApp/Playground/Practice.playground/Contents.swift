@@ -24,3 +24,9 @@ var floatB: Float = 10.01
 floatB ~= floatA
 
 var myAge: Optional<Int> = .some(23)
+var myAge2: Optional<Int> = .none
+
+Bool(0)
+
+Bool(234)
+Bool(-234)
