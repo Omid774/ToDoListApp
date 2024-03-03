@@ -9,3 +9,16 @@ while (true) {
     print("ok")
     break
 }
+
+extension Float {
+    
+    static func ~=(valueA: Float, valueB: Float) -> Bool {
+        return abs(valueA - valueB) <= 0.01
+    }
+    
+}
+
+var floatA: Float = 10.01
+var floatB: Float = 10.01
+
+floatB ~= floatA
