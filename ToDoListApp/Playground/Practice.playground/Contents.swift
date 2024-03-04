@@ -6,21 +6,21 @@ import UIKit
 // https://elcomercio.pe/resizer/wNOHq2Ey0866Ur5dfLfA3C5TcP4=/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/D5DQJROBSFH2DAL2TVL26I6MLE.jpg
 
 
-class A: Hashable {
-    static func == (lhs: A, rhs: A) -> Bool {
+let myURL = "https://reactnative.dev/movies.json"
+
+func fetch() {
+    
+    guard let url = URL(string: myURL) else { return }
+    
+    let dataTask = URLSession.shared.dataTask(with: url) { data, _, error in
         
-        if lhs == rhs { return true }
+        if let error = error { print("there is an error: \(error.localizedDescription)") }
+        
+        guard let data = data else { return }
+        
+        print(data)
         
     }
     
-    func hash(into hasher: inout Hasher) {
-        print("ok")
-    }
-    
-    
-    let name: String = "AAA"
-    
+    dataTask.resume()
 }
-
-
-// inout
