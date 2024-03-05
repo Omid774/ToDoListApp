@@ -39,3 +39,18 @@ func convertToImage(data: Data?) {
 }
 
 fetch()
+
+
+class A: Equatable {
+    static func == (lhs: A, rhs: A) -> Bool {
+        <#code#>
+    }
+    
+    
+}
+
+let a = A()
+let b = A()
+
+print(a !== b)
+
