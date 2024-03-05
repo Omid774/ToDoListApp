@@ -54,3 +54,11 @@ let b = A()
 
 print(a !== b)
 
+
+func plus(_ x: Int, _ y: Int) -> Int {
+    
+    return x + y
+    
+}
+
+plus(2, 3)
