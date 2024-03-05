@@ -12,3 +12,13 @@ let b: Float = 6.4
 if a ~= b {
     
 }
+
+extension Float {
+    
+    static func ~=(valueA: Float, valueB: Float) -> Bool {
+        if abs(valueA - valueB <= 0.01) {
+            return true
+        }
+    }
+    
+}
