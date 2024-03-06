@@ -15,6 +15,14 @@ if a == 10 {
     
     print("a is ten")
     
+    defer {
+        print("second defer")
+    }
+    
+    defer {
+        print("third defer")
+    }
+    
 }
 
 print(a)
