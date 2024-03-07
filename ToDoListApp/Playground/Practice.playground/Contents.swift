@@ -14,4 +14,8 @@ class Car {
     var model: String
     var owner: Person? = nil
     
+    init() {
+        self.model = "BMW"
+    }
+    
 }
