@@ -29,3 +29,8 @@ class DbConnection {
     }
     
 }
+
+var mysqlDB = DbConnection(connection: "File://...")
+mysqlDB.openConnection()
+
+mysqlDB = nil
