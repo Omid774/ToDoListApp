@@ -5,32 +5,19 @@ import UIKit
 // https://api.github.com/repos/:owner/:repo
 // https://elcomercio.pe/resizer/wNOHq2Ey0866Ur5dfLfA3C5TcP4=/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/D5DQJROBSFH2DAL2TVL26I6MLE.jpg
 
-class DbConnection {
+struct Bird {
     
-    var connection: String
-    var dbConnection: String?
-    var finishHandler: (() -> Void)? = nil
+    var name: String
+    var age: Int
+    var isDead: Bool
     
-    deinit {
-        finishHandler = nil
-        closeConnection()
-    }
+    var owner: String?
     
-    init(connection: String) {
-        self.connection = connection
-    }
-    
-    func openConnection() {
-        dbConnection = "open"
-    }
-    
-    func closeConnection() {
-        dbConnection = "close"
+    init(name: String, age: Int, isDead: Bool, owner: String?) {
+        self.name = name
+        self.age = age
+        self.isDead = isDead
+        self.owner = owner
     }
     
 }
-
-var mysqlDB = DbConnection(connection: "File://...")
-mysqlDB.openConnection()
-
-mysqlDB = nil
