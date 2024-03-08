@@ -5,19 +5,47 @@ import UIKit
 // https://api.github.com/repos/:owner/:repo
 // https://elcomercio.pe/resizer/wNOHq2Ey0866Ur5dfLfA3C5TcP4=/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/D5DQJROBSFH2DAL2TVL26I6MLE.jpg
 
-struct Bird {
+@propertyWrapper
+struct ValidRange {
     
-    var name: String
-    var age: Int
-    var isDead: Bool
+    var value: Int
+    var min: Int
+    var max: Int
     
-    var owner: String?
+    var wrappedValue: Int {
+        
+        get {
+            value
+        }
+        
+        set {
+            
+            if newValue < min {
+                value = min
+            } else if newValue > max {
+                value = max
+            } else {
+                value = newValue
+            }
+            
+        }
+        
+    }
     
-    init(name: String, age: Int, isDead: Bool, owner: String?) {
-        self.name = name
-        self.age = age
-        self.isDead = isDead
-        self.owner = owner
+    init(wrappedValue: Int, min: Int, max: Int) {
+        self.value = wrappedValue
+        self.min = min
+        self.max = max
     }
     
 }
+
+
+struct Car {
+    
+    @ValidRange(min: 5, max: 35) var fuel: Int = 0
+    
+}
+
+var car = Car(fuel: 7)
+car.fuel = 38
