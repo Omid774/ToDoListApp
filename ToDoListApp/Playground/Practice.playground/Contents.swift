@@ -16,3 +16,4 @@ let omidPhone = OmidDevices.iPhone
 print(omidPhone.rawValue)
 
 OmidDevices.Speaker.rawValue
+OmidDevices.Speaker.hashValue
