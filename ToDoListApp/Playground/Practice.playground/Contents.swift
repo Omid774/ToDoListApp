@@ -11,3 +11,11 @@ class Player {
     private(set) var play: Bool = false
     
 }
+
+func omid(_ a: () -> Void) {
+    a()
+}
+
+omid {
+    print("ok")
+}
