@@ -12,3 +12,7 @@ class A {
 class B {
     
 }
+
+
+func a() {}
+func b() {}
