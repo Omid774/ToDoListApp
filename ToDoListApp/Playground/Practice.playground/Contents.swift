@@ -6,10 +6,18 @@ import Foundation
 // https://elcomercio.pe/resizer/wNOHq2Ey0866Ur5dfLfA3C5TcP4=/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/D5DQJROBSFH2DAL2TVL26I6MLE.jpg
 
 class A {
+   
+    func a() { }
+    func b() { }
+    
     
 }
 
-class B {
+class B: A {
+    
+    override func a() {
+        print("ok")
+    }
     
 }
 
