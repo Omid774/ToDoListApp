@@ -19,3 +19,18 @@ var dictionary: [Person: String] = [:]
 
 dictionary[person1] = "ok"
 dictionary[person2] = "no"
+
+func fetch() {
+    print("hello", #function)
+}
+
+var fetch1: Optional<() -> Void> = {
+    print("hello", #function)
+}
+
+guard fetch1() else { return }
+fetch()
+
+fetch1 = nil
+
+fetch1()
