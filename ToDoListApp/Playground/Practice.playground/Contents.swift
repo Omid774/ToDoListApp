@@ -7,16 +7,16 @@ import Foundation
 
 class A {
    
-    func a() { }
-    func b() { }
+    static func a() { }
+    class func b() { }
     
     
 }
 
 class B: A {
     
-    override func a() {
-        print("ok")
+    override class func b() {
+        print("")
     }
     
 }
