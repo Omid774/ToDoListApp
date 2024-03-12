@@ -7,6 +7,9 @@ import Foundation
 
 struct A {
     var a: B
+    func omid(x: () -> Void) {
+        x()
+    }
 }
 
 struct B {
