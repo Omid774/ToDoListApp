@@ -7,13 +7,21 @@ import Foundation
 
 
 let a = 10
-let b = 15
 
-switch (a, b) {
-case (let a, 15):
-    print(a)
-case (_, let b):
-    print(b)
-default:
-    print("d")
+if a == 10 {
+    
+    print("ok")
+    
+    defer {
+        print("first defer")
+    }
+    
+    print("no")
+    
+    defer {
+        print("second defer")
+    }
+    
 }
+
+
