@@ -6,33 +6,21 @@ import Foundation
 // https://elcomercio.pe/resizer/wNOHq2Ey0866Ur5dfLfA3C5TcP4=/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/D5DQJROBSFH2DAL2TVL26I6MLE.jpg
 
 
-class Bird {
+class DbConnection {
     
-    var name: String
-    var age: Int
-    var isDead: Bool
+    var connection: String
+    var dbConnection: String?
     
-    var owner: String
-    
-    init(_ name: String, _ age: Int, _ isDead: Bool, owner: String) {
-        self.name = name
-        self.age = age
-        self.isDead = isDead
-        self.owner = owner
+    deinit {
+        self.closeConnection()
     }
     
-    convenience init(name: String, age: Int) {
-        self.init(name, age, false, owner: "omid")
+    init(connection: String) {
+        self.connection = connection
     }
     
-    required init(name: String) {
-        self.name = name
-        self.age = 13
-        self.isDead = true
-        self.owner = "Ali"
-        
-    }
+    func openConnection() { }
+    
+    func closeConnection() { }
     
 }
-
-let myObject = Bird(name: "hasan", age: 45)
