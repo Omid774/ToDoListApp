@@ -25,4 +25,14 @@ class Bird {
         self.init(name, age, false, owner: "omid")
     }
     
+    required init(name: String) {
+        self.name = name
+        self.age = 13
+        self.isDead = true
+        self.owner = "Ali"
+        
+    }
+    
 }
+
+let myObject = Bird(name: "hasan", age: 45)
