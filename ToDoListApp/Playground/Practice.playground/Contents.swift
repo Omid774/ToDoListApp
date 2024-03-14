@@ -6,21 +6,16 @@ import Foundation
 // https://elcomercio.pe/resizer/wNOHq2Ey0866Ur5dfLfA3C5TcP4=/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/D5DQJROBSFH2DAL2TVL26I6MLE.jpg
 
 
-class DbConnection {
+var omid = 5 {
     
-    var connection: String
-    var dbConnection: String?
-    
-    deinit {
-        self.closeConnection()
+    didSet {
+        print("5 is now \(omid)")
     }
     
-    init(connection: String) {
-        self.connection = connection
+    willSet {
+        print("5 is now \(omid)")
     }
-    
-    func openConnection() { }
-    
-    func closeConnection() { }
     
 }
+
+omid = 9
