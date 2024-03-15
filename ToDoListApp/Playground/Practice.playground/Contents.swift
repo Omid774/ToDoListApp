@@ -15,4 +15,10 @@ struct rectangle {
         Float(2) * Float(width + height)
     }
     
+    lazy var volume = calculateVolume()
+    
+    func calculateVolume() -> Float {
+        return.zero
+    }
+    
 }
