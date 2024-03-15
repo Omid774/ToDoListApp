@@ -10,3 +10,11 @@ enum Beverage: CaseIterable {
 }
 
 print(Beverage.allCases)
+
+enum Barcode {
+    case upc(Int, Int, Int, Int)
+    case qrcode(String)
+}
+
+
+let myUPC = Barcode.upc(4, 3, 22, 1)
