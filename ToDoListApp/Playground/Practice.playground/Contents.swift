@@ -1,20 +1,38 @@
 import Foundation
+import UIKit
+
 
 // https://jsonplaceholder.typicode.com/posts
 // https://reactnative.dev/movies.json
 // https://api.github.com/repos/:owner/:repo
 // https://elcomercio.pe/resizer/wNOHq2Ey0866Ur5dfLfA3C5TcP4=/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/D5DQJROBSFH2DAL2TVL26I6MLE.jpg
 
-enum Beverage: CaseIterable {
-    case tea, juice, coffee
+var myClosure: ( () -> Void )? // declare
+
+myClosure = { // implementation
+    print("omid")
 }
 
-print(Beverage.allCases)
+myClosure!() // call
 
-enum Barcode {
-    case upc(Int, Int, Int, Int)
-    case qrcode(String)
+
+protocol A {
+    
 }
 
+class Benz: A {
+    
+    var myClosure: ( () -> Void )? = nil
+    
+}
 
-let myUPC = Barcode.upc(4, 3, 22, 1)
+class Bmw: A {
+    
+    func omid() {
+        var myBenzInstance = Benz() as Benz
+        myBenzInstance.myClosure = {
+            print("ok")
+        }
+    }
+    
+}
